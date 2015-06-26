@@ -4,16 +4,18 @@ wd=w_n*sqrt(1-zeta^2);
 A=sqrt(x0^2+(v0/w_n)^2);
 B=sqrt(x0^2*w_n^2+2*zeta*w_n*x0*v0+v0^2)/(w_n*sqrt(1-zeta^2));
 C=((sqrt(zeta^2-1)-zeta)*w_n*x0-v0)/2*w_n/sqrt(zeta^2-1);
-D= the eq is deleted
-
+D=((sqrt(zeta^2-1)+zeta)*w_n*x0+v0)/2*w_n/sqrt(zeta^2-1);
 
 for n=1:length(t_vec)
     if (zeta==0)
         theta(n)=atan2(x0*w_n,v0);
         phi(n)=atan2(x0*w_n*sqrt(1-zeta^2),zeta*w_n*x0+v0);
         x_vec(n)=A*sin(w_n*t_vec(n)+theta(n));
-     * kfllh;h'fdlg 
-    elseif (zeta<1)
+     
+* kfllh;h'fdlg 
+
+    elseif (zeta<1)%just a comment
+
       theta(n)=atan2(x0*w_n,v0);
         phi(n)=atan2(x0*w_n*sqrt(1-zeta^2),zeta*w_n*x0+v0);
         x_vec(n)=B*exp(-zeta*w_n*t_vec(n))*sin(wd*t_vec(n)+phi(n));
@@ -27,3 +29,4 @@ for n=1:length(t_vec)
     end%fdgnkj
 end
 hgfss
+ehfhfhcfc
